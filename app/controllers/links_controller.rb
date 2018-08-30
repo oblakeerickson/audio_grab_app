@@ -6,6 +6,7 @@ class LinksController < ApplicationController
   def create
     @link = Link.new(link_params)
     puts @link.url
+    ProcessVideoJob.perform_later @link.url
     redirect_to :action => 'new'
   end
 
