@@ -1,0 +1,9 @@
+<h1>Paste YouTube video link below</h1>
+
+<%= form_for(@link) do |f| %>
+  <p>
+    <%= f.text_field :url %>
+  </p>
+
+  <%= f.submit "Submit" %>
+<% end %>
